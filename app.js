@@ -1,5 +1,4 @@
-const ENDPOINT="https://cvwkvwvdtvmhlqpdyojn.supabase.co/functions/v1/freefire-sensitivity-v3";
-
+const ENDPOINT="https://cvwkvwvdtvmhlqpdyojn.supabase.co/functions/v1/freefire-sensitivity-v4";
 const intro=document.querySelector("#intro");
 const loader=document.querySelector("#loader");
 const app=document.querySelector("#app");
