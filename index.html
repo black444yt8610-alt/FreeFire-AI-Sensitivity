@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FreeFire AI Sensitivity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="intro" class="screen">
+    <div class="orb"></div>
+    <p class="eyebrow">AI SENSITIVITY LAB</p>
+    <h1>FreeFire AI</h1>
+    <p class="sub">Personalized sensitivity recommendations powered by Gemini.</p>
+    <button id="enterBtn">ENTER</button>
+  </div>
+
+  <div id="loader" class="screen hidden">
+    <div class="loader"></div>
+    <h2>Initializing AI</h2>
+    <p>Preparing your sensitivity assistant...</p>
+  </div>
+
+  <main id="app" class="hidden">
+    <section class="panel">
+      <p class="eyebrow">GEMINI SENSITIVITY AI</p>
+      <h2>Find your starting settings</h2>
+      <p class="hint">Enter: device name / low sensitivity player or high sensitivity player / graphics smooth, standard, ultra or max</p>
+
+      <form id="form">
+        <input id="device" required maxlength="100" placeholder="Device name (e.g. Vivo Y22)">
+        <select id="style">
+          <option value="low">Low sensitivity player</option>
+          <option value="high">High sensitivity player</option>
+        </select>
+        <select id="graphics">
+          <option value="smooth">Smooth graphics</option>
+          <option value="standard">Standard graphics</option>
+          <option value="ultra">Ultra graphics</option>
+          <option value="max">Max graphics</option>
+        </select>
+        <input id="language" maxlength="40" value="English" placeholder="Reply language (e.g. Tamil)">
+        <button id="askBtn" type="submit">GET AI SENSITIVITY</button>
+      </form>
+
+      <div id="status" class="status"></div>
+      <article id="result" class="result hidden"></article>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
