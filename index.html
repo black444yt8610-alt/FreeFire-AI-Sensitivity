@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nexaro V7</title><link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head>
+<body>
+<header><b>NEXARO<span>•</span></b><small>V7 • INDIA</small></header>
+<main>
+<section id="auth" class="card auth-card">
+  <div class="eyebrow">SECURE ACCESS</div><h1>Nexaro</h1><p>Choose how you want to enter.</p>
+  <div class="mode-tabs"><button id="userMode" class="tab active">User</button><button id="adminMode" class="tab">Admin</button></div>
+  <div id="authBox">
+    <div class="subtabs"><button id="loginTab" class="subtab active">Log in</button><button id="createTab" class="subtab">Create Nexaro Account</button></div>
+    <label>Username</label><input id="authUser" autocomplete="username" placeholder="Your Nexaro username">
+    <label>Password</label><input id="authPass" type="password" autocomplete="current-password" placeholder="Minimum 8 characters">
+    <button id="authGo" class="go">LOG IN TO NEXARO</button>
+    <div id="authStatus" class="status"></div>
+  </div>
+</section>
+
+<section id="app" class="card hidden">
+  <div class="appbar"><div><div class="eyebrow">ADAPTIVE CALIBRATION</div><h1>Nexaro AI</h1></div><div class="who"><span id="who"></span><button id="logout" class="smallbtn">Log out</button></div></div>
+  <p>Enter your current sensitivity and tell Nexaro how your aim feels when you drag.</p>
+  <div class="grid">
+    <input id="device" placeholder="Device model"><input id="ram" type="number" placeholder="RAM (GB)"><input id="refresh" type="number" placeholder="Refresh rate (Hz)"><input id="touch" type="number" placeholder="Touch sampling (Hz)"><input id="dpi" type="number" placeholder="DPI"><input id="width" type="number" placeholder="Screen width"><input id="height" type="number" placeholder="Screen height"><input id="fps" placeholder="FPS">
+    <select id="style"><option value="high">High sensitivity</option><option value="low">Low sensitivity</option></select><select id="graphics"><option value="smooth">smooth</option><option value="standard">standard</option><option value="ultra">ultra</option><option value="max">max</option></select>
+  </div>
+  <h2>Current sensitivity</h2><textarea id="current" placeholder="General: 180&#10;Red Dot: 170&#10;2x: 160&#10;4x: 150&#10;Sniper: 90&#10;Free Look: 120"></textarea>
+  <h2>How does your aim feel when you drag?</h2><div id="opts" class="opts"><button data-v="🎯 Reaches the head smoothly">🎯 Reaches the head smoothly</button><button data-v="↗️ Goes above the target">↗️ Goes above the target</button><button data-v="↘️ Doesn't reach the head">↘️ Doesn't reach the head</button><button data-v="⚡ Too fast / overshoots">⚡ Too fast / overshoots</button><button data-v="🐢 Too slow">🐢 Too slow</button><button data-v="🔄 Inconsistent">🔄 Inconsistent</button><button data-v="✅ Feels good">✅ Feels good</button><button id="customBtn">Custom</button></div>
+  <input id="custom" class="hide" placeholder="Type your custom aim feedback"><button id="go" class="go">GENERATE NEXARO SENSITIVITY</button><div id="status" class="status"></div><pre id="result"></pre>
+</section>
+</main><script src="app.js"></script></body></html>
