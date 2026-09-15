@@ -1,0 +1,1 @@
+Nexaro V7 frontend. Current sensitivity + drag-feel options + Custom. Backend uses Groq API 2, 3, 4 and 5 as server-side failover. Never place API keys in frontend.
