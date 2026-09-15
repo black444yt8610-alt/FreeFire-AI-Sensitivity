@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexaro — Free Fire AI</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand">NEXARO<span>•</span></div><div class="server">IND SERVER</div></header>
+<main>
+<section id="login" class="card login">
+<div class="eyebrow">PLAYER ACCESS</div><h1>Enter your UID</h1>
+<p class="muted">Verify your Free Fire India profile and build your Nexaro player profile.</p>
+<label>UID</label><input id="uid" inputmode="numeric" maxlength="15" placeholder="Enter UID">
+<label>State / UT</label><select id="state"><option value="">Select your state</option></select>
+<button id="verify">VERIFY UID</button><div id="status"></div>
+<p class="tiny">Nexaro never asks for your Free Fire password.</p>
+</section>
+
+<section id="dashboard" class="hidden">
+<div class="card hero"><div><div class="eyebrow">VERIFIED PLAYER</div><h1 id="nickname">Player</h1><p id="meta" class="muted"></p></div><div class="badge">IND 🇮🇳</div></div>
+<div class="grid">
+<div class="card"><h2>Player Profile</h2><div class="stats">
+<div><span>UID</span><b id="puid">—</b></div><div><span>State</span><b id="pstate">—</b></div>
+<div><span>Level</span><b id="plevel">—</b></div><div><span>Likes</span><b id="plikes">—</b></div>
+</div></div>
+<div class="card"><h2>AI Sensitivity</h2><p class="muted">Use your verified profile with the V5 deterministic sensitivity engine.</p><button id="openSensitivity">OPEN SENSITIVITY AI</button></div>
+</div>
+
+<div id="sensitivity" class="card hidden">
+<h2>Nexaro Sensitivity AI</h2>
+<div class="formgrid">
+<input id="device" placeholder="Device model e.g. Vivo Y22"><input id="ram" type="number" placeholder="RAM (GB)">
+<input id="refresh" type="number" placeholder="Refresh rate (Hz)"><input id="touch" type="number" placeholder="Touch sampling (Hz)">
+<input id="dpi" type="number" placeholder="DPI"><input id="width" type="number" placeholder="Screen width">
+<input id="height" type="number" placeholder="Screen height"><input id="fps" placeholder="FPS e.g. 60">
+<select id="style"><option value="high">High sensitivity</option><option value="low">Low sensitivity</option></select>
+<select id="graphics"><option value="smooth">Smooth</option><option value="standard">Standard</option><option value="ultra">Ultra</option><option value="max">Max</option></select>
+</div>
+<button id="generate">GENERATE SENSITIVITY</button><pre id="result"></pre>
+</div>
+</section>
+</main>
+<footer>NEXARO • Free Fire AI • India</footer>
+<script src="app.js"></script>
+</body></html>
